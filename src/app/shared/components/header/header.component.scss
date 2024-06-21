@@ -1,0 +1,26 @@
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.toolbar-contents{
+  display: flex;
+  width: 100%;
+}
+
+.toolbar-title{
+    display: flex; 
+    justify-content: left;
+    color: black;
+    font-size: 27px;
+}
+
+.toolbar-interactive-options{
+  display: flex;
+  justify-content: space-between;
+  gap: 400px;
+  font-size: 25px;
+  margin-left: 15%;
+}
