@@ -15,6 +15,7 @@
     justify-content: left;
     color: black;
     font-size: 27px;
+    cursor: pointer;
 }
 
 .toolbar-interactive-options{
@@ -23,4 +24,9 @@
   gap: 400px;
   font-size: 25px;
   margin-left: 15%;
+  cursor: pointer;
+}
+
+.toolbar-interactive-options p:hover{
+  text-decoration: underline;
 }

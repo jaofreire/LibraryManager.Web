@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,4 +11,10 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 })
 export class HeaderComponent {
 
+  constructor(private route: Router){
+  }
+
+  navigateTo(path: string){
+    this.route.navigate([path])
+  }
 }
