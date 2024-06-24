@@ -6,7 +6,7 @@ import { ViewBooksModel } from '../Models/view-books-model';
 @Injectable({
   providedIn: 'root'
 })
-export class LibraryManagerApiServiceService {
+export class LibraryManagerApiService{
 
   constructor() { }
 

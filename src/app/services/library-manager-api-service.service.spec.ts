@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { LibraryManagerApiServiceService } from './library-manager-api-service.service';
+import { LibraryManagerApiService } from './library-manager-api-service.service';
 
 describe('LibraryManagerApiServiceService', () => {
-  let service: LibraryManagerApiServiceService;
+  let service: LibraryManagerApiService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(LibraryManagerApiServiceService);
+    service = TestBed.inject(LibraryManagerApiService);
   });
 
   it('should be created', () => {

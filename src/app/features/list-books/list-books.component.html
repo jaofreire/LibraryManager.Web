@@ -1,5 +1,19 @@
-<ul class="books-list">
-    <li *ngFor="let books of allBooks">
-        {{books.title}}
-    </li>
-</ul>
+<div class="books-container">
+    <mat-card *ngFor="let books of allBooks">
+        <div class="bookscards-header">
+            <mat-card-header>
+                <mat-card-title> {{books.title}}</mat-card-title>
+                <mat-card-subtitle> {{books.category}}</mat-card-subtitle>
+            </mat-card-header>
+            <div class="bookscards-content">
+                <mat-card-content> {{books.description}}</mat-card-content>
+                <mat-card-content class="bookscards-price">$ {{books.price}}</mat-card-content>
+            </div>
+            <div class="bookscard-buttons">
+                <mat-card-actions>
+                    <button type="button" class="btn btn-primary">Add to cart</button>
+                </mat-card-actions>
+            </div>
+        </div>
+    </mat-card>
+</div>

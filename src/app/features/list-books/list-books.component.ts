@@ -1,33 +1,34 @@
 import { Component } from '@angular/core';
-import { LibraryManagerApiServiceService } from '../../services/library-manager-api-service.service';
+import { LibraryManagerApiService } from '../../services/library-manager-api-service.service';
 import { ViewBooksModel } from '../../Models/view-books-model';
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 @Component({
   selector: 'app-list-books',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatCardModule, TooltipModule],
   templateUrl: './list-books.component.html',
-  styles: ``
+  styleUrls: ['./list-books.component.scss']
 })
+
 export class ListBooksComponent {
 
   allBooks: ViewBooksModel[] = [];
 
-  constructor(public libraryManagerApiService: LibraryManagerApiServiceService){
+  constructor(private libraryManagerApiService: LibraryManagerApiService){
+
     this.libraryManagerApiService.getAllBooks()
     .then(response =>{
       this.allBooks = response.data.map((item: any) => new ViewBooksModel(item));
-      console.log(this.allBooks[0])
       console.log(response.data)
     })
     .catch(error =>{
       console.log(error)
     })
     
-
   }
 
-  
 
 }
