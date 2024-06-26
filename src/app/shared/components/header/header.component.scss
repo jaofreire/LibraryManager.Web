@@ -7,6 +7,7 @@
 
 .toolbar-contents{
   display: flex;
+  justify-content: center;
   width: 100%;
 }
 
@@ -15,18 +16,10 @@
     justify-content: left;
     color: black;
     font-size: 27px;
+    margin-top: 27px;
     cursor: pointer;
 }
 
-.toolbar-interactive-options{
-  display: flex;
-  justify-content: space-between;
-  gap: 400px;
-  font-size: 25px;
-  margin-left: 15%;
-  cursor: pointer;
-}
-
-.toolbar-interactive-options p:hover{
-  text-decoration: underline;
+.search-bar-container{
+  margin-left: 360px;
 }

@@ -3,12 +3,13 @@ import { LibraryManagerApiService } from '../../services/library-manager-api-ser
 import { ViewBooksModel } from '../../Models/view-books-model';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 @Component({
   selector: 'app-list-books',
   standalone: true,
-  imports: [CommonModule, MatCardModule, TooltipModule],
+  imports: [CommonModule, MatCardModule, MatButtonModule, TooltipModule],
   templateUrl: './list-books.component.html',
   styleUrls: ['./list-books.component.scss']
 })
