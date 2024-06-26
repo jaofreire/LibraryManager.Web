@@ -22,8 +22,4 @@ export class LibraryManagerApiService{
     return axios.get("https://localhost:8081/book/category/" + category)
   }
 
-  getUserValidateCredentials(id: number){
-    return axios.get("https://localhost:8081/validateCredentials/" + id)
-  }
-
 }

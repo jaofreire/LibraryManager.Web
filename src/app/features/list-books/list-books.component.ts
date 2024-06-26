@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LibraryManagerApiService } from '../../services/library-manager-api-service.service';
+import { BooksService } from '../../services/books.service';
 import { ViewBooksModel } from '../../Models/view-books-model';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
@@ -9,7 +9,12 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 @Component({
   selector: 'app-list-books',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatButtonModule, TooltipModule],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatButtonModule,
+    TooltipModule
+  ],
   templateUrl: './list-books.component.html',
   styleUrls: ['./list-books.component.scss']
 })
@@ -18,18 +23,18 @@ export class ListBooksComponent {
 
   allBooks: ViewBooksModel[] = [];
 
-  constructor(private libraryManagerApiService: LibraryManagerApiService){
-
-    this.libraryManagerApiService.getAllBooks()
+  constructor(private booksService: BooksService){
+    this.booksService.getAll()
     .then(response =>{
       this.allBooks = response.data.map((item: any) => new ViewBooksModel(item));
-      console.log(response.data)
+      console.log(response.data);
     })
     .catch(error =>{
-      console.log(error)
+      console.log(error);
     })
-    
   }
+
+
 
 
 }

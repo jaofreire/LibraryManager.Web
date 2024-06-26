@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
-import { LibraryManagerApiService } from '../../../services/library-manager-api-service.service';
 import { ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms'
-
-
+import { ViewBooksModel } from '../../../Models/view-books-model';
+import { Router } from '@angular/router';
+import { BooksService } from '../../../services/books.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -24,17 +24,27 @@ export class SearchBarComponent {
     searchInputName: new FormControl('')
   });
 
-  constructor(private libraryApiService: LibraryManagerApiService){
+  allBooks: ViewBooksModel[] = [];
+
+  constructor( private route: Router,
+    private booksService: BooksService
+  )
+  {
   }
 
   onSubmitSearch(){
-    this.libraryApiService.getBooksByName(this.SearchForm.value.searchInputName ?? "")
+    this.booksService.getByName(this.SearchForm.value.searchInputName ?? '')
     .then(response =>{
-      console.log(response.data);
+      this.allBooks = response.data.map((item: any) => new ViewBooksModel(item))
+      this.booksService.allBooksFetcheds = this.allBooks;
+      this.route.navigate(['books']);
+      this.route.navigate(['books/filter']);
+      console.log(response.data)
     })
     .catch(error =>{
       console.log(error);
-    })
+    });
+
   }
 
 
