@@ -25,11 +25,11 @@ export class ListBooksFilterComponent {
 
   allBooks: ViewBooksModel[] = [];
 
-  constructor(private booksSevice: BooksService){
+  constructor(public booksService: BooksService){
   }
 
   ngOnInit(){
-    this.allBooks = this.booksSevice.allBooksFetcheds;
+    this.allBooks = this.booksService.allBooksFetcheds;
   }
 
 

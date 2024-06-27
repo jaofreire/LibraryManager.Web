@@ -26,7 +26,7 @@ export class ListBooksComponent {
 
   allBooks: ViewBooksModel[] = [];
 
-  constructor(private booksService: BooksService){
+  constructor(public booksService: BooksService){
   }
 
   ngOnInit(){

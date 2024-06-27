@@ -9,6 +9,7 @@ import { AxiosResponse } from 'axios';
 export class BooksService {
 
   allBooksFetcheds: ViewBooksModel[] = [];
+  searchInputString: string = '';
 
   constructor(private libraryApiService: LibraryManagerApiService){
   }

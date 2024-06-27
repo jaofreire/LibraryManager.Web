@@ -37,6 +37,7 @@ export class SearchBarComponent {
     .then(async response =>{
       this.allBooks = response.data.map((item: any) => new ViewBooksModel(item));
       this.booksService.allBooksFetcheds = this.allBooks;
+      this.booksService.searchInputString = this.SearchForm.value.searchInputName ?? '';
 
       await this.refreshComponent();
       console.log(response.data);

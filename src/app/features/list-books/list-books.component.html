@@ -1,7 +1,10 @@
-
-
 <div class="page-container">
-    <h1 class="result-text">Results: </h1>
+    @if(booksService.searchInputString === ''){
+        <h1 class="result-text">Results: </h1>
+    }
+    @else {
+        <h1 class="result-text">Results to: "{{booksService.searchInputString}}" </h1>
+    }
     <div class="books-results-filter-content">
         <section class="check-box-section">
             <span class="check-box-title">Filter by</span>
