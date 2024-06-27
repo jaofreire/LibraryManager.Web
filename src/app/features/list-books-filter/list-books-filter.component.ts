@@ -22,6 +22,9 @@ export class ListBooksFilterComponent {
   allBooks: ViewBooksModel[] = [];
 
   constructor(private booksSevice: BooksService){
+  }
+
+  ngOnInit(){
     this.allBooks = this.booksSevice.allBooksFetcheds;
   }
 

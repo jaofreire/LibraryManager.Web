@@ -24,6 +24,9 @@ export class ListBooksComponent {
   allBooks: ViewBooksModel[] = [];
 
   constructor(private booksService: BooksService){
+  }
+
+  ngOnInit(){
     this.booksService.getAll()
     .then(response =>{
       this.allBooks = response.data.map((item: any) => new ViewBooksModel(item));
@@ -32,9 +35,7 @@ export class ListBooksComponent {
     .catch(error =>{
       console.log(error);
     })
+
   }
-
-
-
 
 }

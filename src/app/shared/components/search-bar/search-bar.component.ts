@@ -34,12 +34,11 @@ export class SearchBarComponent {
 
   onSubmitSearch(){
     this.booksService.getByName(this.SearchForm.value.searchInputName ?? '')
-    .then(response =>{
-      this.allBooks = response.data.map((item: any) => new ViewBooksModel(item))
+    .then(async response =>{
+      this.allBooks = response.data.map((item: any) => new ViewBooksModel(item));
       this.booksService.allBooksFetcheds = this.allBooks;
-      this.route.navigate(['books']);
-      this.route.navigate(['books/filter']);
-      console.log(response.data)
+      await this.refreshComponent();
+      console.log(response.data);
     })
     .catch(error =>{
       console.log(error);
@@ -47,8 +46,10 @@ export class SearchBarComponent {
 
   }
 
-
-
+ async refreshComponent(){
+   await this.route.navigateByUrl('/books', {skipLocationChange: true});
+   await this.route.navigateByUrl('/books/filter');
+  }
 
 
 }
