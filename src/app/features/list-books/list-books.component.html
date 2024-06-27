@@ -1,19 +1,36 @@
-<div class="books-container">
-    <mat-card *ngFor="let books of allBooks">
-        <div class="bookscards-header">
-            <mat-card-header>
-                <mat-card-title> {{books.title}}</mat-card-title>
-                <mat-card-subtitle> {{books.category}}</mat-card-subtitle>
-            </mat-card-header>
-            <div class="bookscards-content">
-                <mat-card-content> {{books.description}}</mat-card-content>
-                <mat-card-content class="bookscards-price">$ {{books.price}}</mat-card-content>
+
+
+<div class="page-container">
+    <h1 class="result-text">Results: </h1>
+    <div class="books-results-filter-content">
+        <section class="check-box-section">
+            <span class="check-box-title">Filter by</span>
+            <mat-divider></mat-divider>
+            <div class="check-box-filter-by">
+                <span class="check-box-filter-title">Categorys</span>
+                <span class="check-box-filter-list">
+                 <mat-checkbox></mat-checkbox>
+                </span>
             </div>
-            <div class="bookscard-buttons">
-                <mat-card-actions>
-                    <button mat-stroked-button class="bookscards-button-addtocard">Add to cart</button>
-                </mat-card-actions>
-            </div>
+        </section> 
+        <div class="books-container">
+            <mat-card *ngFor="let books of allBooks">
+                <div class="bookscards-header">
+                    <mat-card-header>
+                        <mat-card-title> {{books.title}}</mat-card-title>
+                        <mat-card-subtitle> {{books.category}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <div class="bookscards-content">
+                        <mat-card-content> {{books.description}}</mat-card-content>
+                        <mat-card-content class="bookscards-price">$ {{books.price}}</mat-card-content>
+                    </div>
+                    <div class="bookscard-buttons">
+                        <mat-card-actions>
+                            <button mat-stroked-button class="bookscards-button-addtocard">Add to cart</button>
+                        </mat-card-actions>
+                    </div>
+                </div>
+            </mat-card>
         </div>
-    </mat-card>
+    </div>
 </div>

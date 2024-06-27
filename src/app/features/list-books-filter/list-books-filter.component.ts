@@ -4,6 +4,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { ViewBooksModel } from '../../Models/view-books-model';
 import { BooksService } from '../../services/books.service';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-list-books-filter',
@@ -11,7 +13,9 @@ import { BooksService } from '../../services/books.service';
   imports: [
     CommonModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule,
+    MatDividerModule
   ],
   templateUrl: '../list-books/list-books.component.html',
   styleUrls: ['../list-books/list-books.component.scss']

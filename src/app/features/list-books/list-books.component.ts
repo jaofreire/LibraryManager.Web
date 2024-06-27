@@ -4,7 +4,9 @@ import { ViewBooksModel } from '../../Models/view-books-model';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDividerModule } from '@angular/material/divider';
+
 
 @Component({
   selector: 'app-list-books',
@@ -13,7 +15,8 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
     CommonModule,
     MatCardModule,
     MatButtonModule,
-    TooltipModule
+    MatCheckboxModule,
+    MatDividerModule
   ],
   templateUrl: './list-books.component.html',
   styleUrls: ['./list-books.component.scss']

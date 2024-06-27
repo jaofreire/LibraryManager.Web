@@ -4,6 +4,7 @@ import { ListBooksFilterComponent } from './features/list-books-filter/list-book
 
 
 export const routes: Routes = [
+    {path: '', redirectTo: '/books', pathMatch: 'full'},
     {path: 'books', component: ListBooksComponent},
     {path: 'books/filter', component: ListBooksFilterComponent}
 ];
