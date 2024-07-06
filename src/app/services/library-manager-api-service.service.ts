@@ -22,4 +22,9 @@ export class LibraryManagerApiService{
     return axios.get("https://localhost:8081/book/category/" + category)
   }
 
+  getBooksByCategories(categoriesList: string[]){
+    return axios.get("https://localhost:8081/book/categories/" + categoriesList)
+  }
+
+
 }

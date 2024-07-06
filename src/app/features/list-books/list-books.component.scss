@@ -30,14 +30,13 @@
 }
 
 .check-box-section{
-    // width: 250px;
     margin-top: 10px;
     margin-right: 20px;
     width: 200px;
 }
 
 .check-box-filter-list{
-    display: flex;
+    display: grid;
     justify-content: left;
     margin-right: 10px;
 }

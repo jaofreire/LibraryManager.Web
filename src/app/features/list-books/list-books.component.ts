@@ -25,6 +25,7 @@ import { MatDividerModule } from '@angular/material/divider';
 export class ListBooksComponent {
 
   allBooks: ViewBooksModel[] = [];
+  avaliableCategories: string[] = [];
 
   constructor(public booksService: BooksService){
   }
@@ -32,11 +33,25 @@ export class ListBooksComponent {
   ngOnInit(){
     this.booksService.getAll()
     .then(response =>{
-      this.allBooks = response.data.map((item: any) => new ViewBooksModel(item));
+      this.allBooks = response.data.map((item: any) => new ViewBooksModel(item))
       console.log(response.data);
+
+      this.fetchAvalibleCategories();
+      
     })
     .catch(error =>{
       console.log(error);
+    });
+ 
+  }
+
+  fetchAvalibleCategories(){
+
+    this.allBooks.forEach(books =>{
+      if(!this.avaliableCategories.includes(books.category)){
+        this.avaliableCategories.push(books.category);
+      }
+
     })
 
   }

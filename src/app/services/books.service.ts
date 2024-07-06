@@ -26,5 +26,9 @@ export class BooksService {
     return this.libraryApiService.getBooksByCategory(category)
   }
 
+  getByCategories(categoriesList: string[]){
+    return this.libraryApiService.getBooksByCategories(categoriesList);
+  }
+
 
 }

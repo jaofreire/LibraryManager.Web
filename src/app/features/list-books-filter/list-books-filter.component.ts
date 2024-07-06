@@ -24,12 +24,17 @@ import { MatDividerModule } from '@angular/material/divider';
 export class ListBooksFilterComponent {
 
   allBooks: ViewBooksModel[] = [];
+  avaliableCategories: string[] = [];
 
   constructor(public booksService: BooksService){
   }
 
   ngOnInit(){
     this.allBooks = this.booksService.allBooksFetcheds;
+
+    this.allBooks.forEach(books =>{
+      this.avaliableCategories.push(books.category);
+    })
   }
 
 
