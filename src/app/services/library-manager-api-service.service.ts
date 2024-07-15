@@ -1,29 +1,41 @@
 import { Injectable } from '@angular/core';
-import  axios  from 'axios'
+import  axios, { Axios }  from 'axios'
 import { Observable, from } from 'rxjs';
 import { ViewBooksModel } from '../Models/view-books-model';
+import qs from 'qs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LibraryManagerApiService{
 
+  axiosInstance : Axios = axios.create({
+    baseURL: "https://localhost:8081/"
+  });
+
   constructor() { }
 
   getAllBooks(){
-    return axios.get("https://localhost:8081/book")
+    return this.axiosInstance.get("/book")
   }
 
   getBooksByName(name: string){
-    return axios.get("https://localhost:8081/book/name/" + name)
+    return this.axiosInstance.get("/book/name/" + name)
   }
 
   getBooksByCategory(category: string){
-    return axios.get("https://localhost:8081/book/category/" + category)
+    return this.axiosInstance.get("/book/category/" + category)
   }
 
-  getBooksByCategories(categoriesList: string[]){
-    return axios.get("https://localhost:8081/book/categories/" + categoriesList)
+  getBooksByCategories(categoriesListParam: string[]){
+    return this.axiosInstance.get("/book/categories",{
+      params: {
+        categoriesList: categoriesListParam
+      },
+      paramsSerializer: params =>{
+        return qs.stringify(params);
+      }
+    })
   }
 
 

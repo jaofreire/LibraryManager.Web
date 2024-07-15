@@ -12,7 +12,15 @@
             <div class="check-box-filter-by">
                 <span class="check-box-filter-title">Categorys</span>
                 <span class="check-box-filter-list">
-                 <mat-checkbox *ngFor="let categories of avaliableCategories">{{categories}}</mat-checkbox>
+                 <mat-checkbox *ngFor="let categories of avaliableCategories"
+                  (change)="changeCheckBoxState(categories)">
+
+                  {{categories}}
+                  
+                 </mat-checkbox>
+                 <button mat-stroked-button class="check-box-filter-apply-button" (click)="applyFilter()">
+                    Apply filter
+                </button>
                 </span>
             </div>
         </section> 
