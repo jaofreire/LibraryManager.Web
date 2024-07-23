@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
 import { ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms'
-import { ViewBooksModel } from '../../../Models/view-books-model';
+import { ViewBooksModel } from '../../../Core/Domain/Models/view-books-model';
 import { Router } from '@angular/router';
 import { BooksService } from '../../../services/books.service';
 

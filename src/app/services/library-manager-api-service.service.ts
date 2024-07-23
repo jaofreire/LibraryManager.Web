@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import  axios, { Axios }  from 'axios'
 import { Observable, from } from 'rxjs';
-import { ViewBooksModel } from '../Models/view-books-model';
+import { ViewBooksModel } from '../Core/Domain/Models/view-books-model';
 import qs from 'qs';
+import { CreateUserDTO } from '../Core/Application/DTOs/Input/CreateUserDTO';
+import { ViewValidateCredentialsDTO } from '../Core/Application/DTOs/Output/ViewValidateCredentialsDTO';
+import { ValidateCredentialsDTO } from '../Core/Application/DTOs/Input/ValidateCredentialsDTO';
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +40,28 @@ export class LibraryManagerApiService{
       }
     })
   }
+
+  createToken(requestData: ViewValidateCredentialsDTO){
+    return this.axiosInstance.post("/token", requestData);
+  }
+
+  registerUser(requestData: CreateUserDTO){
+    return this.axiosInstance.post("/user", requestData)
+  }
+
+  validateCredentials(requestData: ValidateCredentialsDTO){
+    return this.axiosInstance.get("/validateCredentials",
+      {
+        params:{
+          Name: requestData.name,
+          Email: requestData.email,
+          Password: requestData.password
+        }
+      }
+    )
+
+  }
+
 
 
 }

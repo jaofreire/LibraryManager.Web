@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BooksService } from '../../services/books.service';
-import { ViewBooksModel } from '../../Models/view-books-model';
+import { ViewBooksModel } from '../../Core/Domain/Models/view-books-model';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
