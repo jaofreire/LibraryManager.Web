@@ -1,27 +1,23 @@
-# LibraryManagerWeb
+# Library Nice Bocks
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+Library Nice Bocks is a frontend project for a library management system. The project allows users to log in, search for books by author, name, or category, and will have a future feature for purchasing books. This project uses Angular, TypeScript, and Axios for its implementation.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Login**: Secure login functionality for users.
+- **Search Books**: Users can search for books by:
+  - Author
+  - Name
+  - Category
+- **Future Feature**: Purchasing books.
 
-## Code scaffolding
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Angular**: A platform for building mobile and desktop web applications.
+- **TypeScript**: A superset of JavaScript that compiles to clean JavaScript output.
+- **Axios**: Promise-based HTTP client for the browser and node.js.
 
-## Build
+## API
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+This project interacts with the [LibraryManager.API](https://github.com/jaofreire/LibraryManagerAPI). Below are details about the available endpoints and how to use them.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
