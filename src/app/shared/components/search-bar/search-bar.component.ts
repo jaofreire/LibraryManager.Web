@@ -4,7 +4,7 @@ import { MatInputModule } from '@angular/material/input'
 import { ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms'
 import { ViewBooksModel } from '../../../Core/Domain/Models/view-books-model';
 import { Router } from '@angular/router';
-import { BooksService } from '../../../services/books.service';
+import { BooksService } from '../../../services/ApiServices/books.service';
 
 @Component({
   selector: 'app-search-bar',

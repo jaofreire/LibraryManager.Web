@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { LibraryManagerApiService } from './library-manager-api-service.service';
-import { ViewBooksModel } from '../Core/Domain/Models/view-books-model';
+import { ViewBooksModel } from '../../Core/Domain/Models/view-books-model';
 import { AxiosResponse } from 'axios';
 
 @Injectable({

@@ -5,7 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators, FormGroup, FormControl } from '@angular/forms';
 import { CreateUserDTO } from '../../Core/Application/DTOs/Input/CreateUserDTO';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../services/ApiServices/user.service';
 import { Router } from '@angular/router';
 
 @Component({

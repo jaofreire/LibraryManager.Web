@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import  axios, { Axios }  from 'axios'
 import { Observable, from } from 'rxjs';
-import { ViewBooksModel } from '../Core/Domain/Models/view-books-model';
+import { ViewBooksModel } from '../../Core/Domain/Models/view-books-model';
 import qs from 'qs';
-import { CreateUserDTO } from '../Core/Application/DTOs/Input/CreateUserDTO';
-import { ViewValidateCredentialsDTO } from '../Core/Application/DTOs/Output/ViewValidateCredentialsDTO';
-import { ValidateCredentialsDTO } from '../Core/Application/DTOs/Input/ValidateCredentialsDTO';
+import { CreateUserDTO } from '../../Core/Application/DTOs/Input/CreateUserDTO';
+import { ViewValidateCredentialsDTO } from '../../Core/Application/DTOs/Output/ViewValidateCredentialsDTO';
+import { ValidateCredentialsDTO } from '../../Core/Application/DTOs/Input/ValidateCredentialsDTO';
 
 @Injectable({
   providedIn: 'root'

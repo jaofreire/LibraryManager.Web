@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { LibraryManagerApiService } from './library-manager-api-service.service';
-import { ViewValidateCredentialsDTO } from '../Core/Application/DTOs/Output/ViewValidateCredentialsDTO';
+import { ViewValidateCredentialsDTO } from '../../Core/Application/DTOs/Output/ViewValidateCredentialsDTO';
 
 @Injectable({
   providedIn: 'root'

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { ViewBooksModel } from '../../Core/Domain/Models/view-books-model';
-import { BooksService } from '../../services/books.service';
+import { BooksService } from '../../services/ApiServices/books.service';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
 import { Router } from '@angular/router';
